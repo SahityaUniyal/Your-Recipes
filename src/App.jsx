@@ -1,7 +1,12 @@
 import "./App.css";
-
+import { Logo } from "./components/index";
+import LogoutBtn from "./components/Header/LogoutBtn";
 function App() {
-  return <>Your Recipes</>;
+  return (
+    <>
+      <LogoutBtn />
+    </>
+  );
 }
 
 export default App;

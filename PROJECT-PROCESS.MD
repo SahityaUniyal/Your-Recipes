@@ -2,8 +2,10 @@
 
 ## Techstack used
 
-    - Tailwind
-    - appwrite
+    - Tailwind : for styling
+    - appwrite : backend-as-a-service
+    - @reduxjs/toolkit and react-redux : data fetching and maintaining store
+    - react-router-dom:
 
 ### Basic set up
 
@@ -31,3 +33,28 @@
         - Create a `file.js` file where featuredImage is handled
             - create upload image , get preview image, delete image
         - We export the object of class created in each file
+
+### Redux toolkit store
+
+- Set up the store and wrap the App component in the Provider and pass store
+- Create auth slice and post slice
+  - Auth slice stores the user authorization status and userData
+  - Post slice stores all posts, users own posts and clear posts
+
+### Create all the components
+
+- Container: container that wraps all the elements
+- Button : button that will be used everywhere
+- Logo: sites logo
+- Logout: Logout button conditianally rendered in header
+
+- header: main header for the website
+- footer
+- input
+- select {recipie active or inactive}
+- recipies Card : display the recipies
+- login
+- signup
+- Auth
+- RTE
+- post recipe uses rte
