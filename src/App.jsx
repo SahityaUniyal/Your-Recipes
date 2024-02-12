@@ -1,10 +1,10 @@
 import "./App.css";
-import { Logo } from "./components/index";
-import LogoutBtn from "./components/Header/LogoutBtn";
+import { Footer } from "./components/index";
+
 function App() {
   return (
     <>
-      <LogoutBtn />
+      <Footer />
     </>
   );
 }

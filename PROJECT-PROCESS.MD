@@ -44,11 +44,20 @@
 ### Create all the components
 
 - Container: container that wraps all the elements
+
 - Button : button that will be used everywhere
+
 - Logo: sites logo
+
 - Logout: Logout button conditianally rendered in header
 
 - header: main header for the website
+
+  - create a array of objects of items to be displayed in navbar
+  -
+
+  /// Setting login logout btn
+
 - footer
 - input
 - select {recipie active or inactive}

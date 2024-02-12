@@ -8,11 +8,10 @@ function Button({
   className = "",
   ...props
 }) {
-  console.log("reached");
   return (
     <button
       type={type}
-      className={`w-[101px] h-[41px] rounded-md ${className}${bgColor} ${textColor}`}
+      className={`w-20  h-[41px] rounded-md ${className}${bgColor} ${textColor} hover:bg-[#00aaa2ab] hover:border hover:text-black`}
       {...props}
     >
       {children}

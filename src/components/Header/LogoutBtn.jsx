@@ -29,7 +29,7 @@ function LogoutBtn() {
     <div>
       <button
         onClick={logoutHandler}
-        className="m-10 w-[74px] h-[35px] text-[#666666]  rounded-md border border-[#999999] hover:bg-[#00AAA1] hover:text-white hover:border-none"
+        className="w-20  h-[41px] text-[#666666]  rounded-md border border-[#999999] hover:bg-[#00AAA1] hover:text-white hover:border-none"
       >
         Logout
       </button>
