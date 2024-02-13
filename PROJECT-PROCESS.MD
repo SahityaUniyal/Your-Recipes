@@ -54,15 +54,21 @@
 - header: main header for the website
 
   - create a array of objects of items to be displayed in navbar
-  -
+  - render them as list items in `ul`
+  - useNvigate object to navigate to respective link for them
+  - Conditional render the logout button based on the auth status
 
-  /// Setting login logout btn
+- footer: footer component
 
-- footer
-- input
+- input : common input for all components
+
+  - will use forwardRef so that function where it is used can get the reference to it
+
 - select {recipie active or inactive}
-- recipies Card : display the recipies
-- login
+  - will use forwardRef to incase we want a reference to it
+- recipies Card : display the recipie
+
+- login : Login component
 - signup
 - Auth
 - RTE

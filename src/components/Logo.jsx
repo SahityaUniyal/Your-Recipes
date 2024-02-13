@@ -8,7 +8,7 @@ function Logo({
 }) {
   return (
     <div>
-      <p className={`capitalize  text-[24px] ${fontWeight} ${textColor}`}>
+      <p className={`uppercase  text-[24px] ${fontWeight} ${textColor}`}>
         <span className={`px-1 ${bgColor} ${textColor}`}>Your</span>
         <span className="text-black text-[17px]">Recipes</span>
       </p>
