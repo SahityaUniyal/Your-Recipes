@@ -24,6 +24,7 @@ class AppwriteAuthService {
       }
     } catch (error) {
       console.error("Appwrite Auth:: create account :: error ", error);
+      throw error;
     }
   }
   async login({ email, password }) {
@@ -31,6 +32,7 @@ class AppwriteAuthService {
       return await this.account.createEmailSession(email, password);
     } catch (error) {
       console.error("Appwrite auth :: login :: error", error);
+      throw error;
     }
   }
   async getCurrentUser() {
@@ -46,6 +48,7 @@ class AppwriteAuthService {
       await this.account.deleteSession();
     } catch (error) {
       console.error("Appwrite auth :: logout :: error", error);
+      throw error;
     }
   }
   async updatePassword({ oldPassword, newPassword }) {
@@ -53,6 +56,7 @@ class AppwriteAuthService {
       return await this.account.updatePassword(newPassword, oldPassword);
     } catch (error) {
       console.error("Appwrite auth :: update password :: error", error);
+      throw error;
     }
   }
 }

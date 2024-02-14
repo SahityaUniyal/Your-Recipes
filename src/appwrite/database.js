@@ -10,7 +10,7 @@ class AppwriteDatabaseService {
       .setProject(conf.appwriteProjectId);
     this.databases = new Databases(this.client);
   }
-  async createPost({ title, content, featuredImage, status, userId }) {
+  async createRecipe({ title, content, featuredImage, status, userId }) {
     try {
       return await this.databases.createDocument(
         conf.appwriteDatabaseId,
@@ -25,10 +25,10 @@ class AppwriteDatabaseService {
         }
       );
     } catch (error) {
-      console.error("Appwrite databases :: create post :: error", error);
+      console.error("Appwrite databases :: create Recipe :: error", error);
     }
   }
-  async updatePost(documentId, { title, content, featuredImage, status }) {
+  async updateRecipe(documentId, { title, content, featuredImage, status }) {
     try {
       return await this.databases.updateDocument(
         conf.appwriteDatabaseId,
@@ -42,10 +42,10 @@ class AppwriteDatabaseService {
         }
       );
     } catch (error) {
-      console.error("Appwrite databases :: update post :: error", error);
+      console.error("Appwrite databases :: update Recipe :: error", error);
     }
   }
-  async deletePost(documentId) {
+  async deleteRecipe(documentId) {
     try {
       await this.databases.deleteDocument(
         conf.appwriteDatabaseId,
@@ -54,10 +54,10 @@ class AppwriteDatabaseService {
       );
       return true;
     } catch (error) {
-      console.error("Appwrite databases :: delete post :: error", error);
+      console.error("Appwrite databases :: delete Recipe :: error", error);
     }
   }
-  async getPost(documentId) {
+  async getRecipe(documentId) {
     try {
       return await this.databases.getDocument(
         conf.appwriteDatabaseId,
@@ -65,10 +65,10 @@ class AppwriteDatabaseService {
         documentId
       );
     } catch (error) {
-      console.error("Appwrite databases :: get post :: error", error);
+      console.error("Appwrite databases :: get Recipe :: error", error);
     }
   }
-  async getPosts(queries = [Query.equal("status", "active")]) {
+  async getRecipes(queries = [Query.equal("status", "active")]) {
     try {
       return await this.databases.getDocument(
         conf.appwriteDatabaseId,
@@ -76,10 +76,10 @@ class AppwriteDatabaseService {
         queries
       );
     } catch (error) {
-      console.error("Appwrite databases :: get posts :: error", error);
+      console.error("Appwrite databases :: get Recipes :: error", error);
     }
   }
-  async getUserPosts(userId) {
+  async getUserRecipes(userId) {
     try {
       return await this.databases.getDocument(
         conf.appwriteDatabaseId,
@@ -87,7 +87,7 @@ class AppwriteDatabaseService {
         [Query.equal("userId", userId)]
       );
     } catch (error) {
-      console.error("Appwrite databases :: get users posts :: error", error);
+      console.error("Appwrite databases :: get users Recipes :: error", error);
     }
   }
 }

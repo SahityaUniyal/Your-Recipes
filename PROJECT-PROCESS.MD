@@ -6,6 +6,7 @@
     - appwrite : backend-as-a-service
     - @reduxjs/toolkit and react-redux : data fetching and maintaining store
     - react-router-dom:
+    - react-hook-form : manage forms
 
 ### Basic set up
 
@@ -69,7 +70,21 @@
 - recipies Card : display the recipie
 
 - login : Login component
+
+  - use react-hook-form to manage the form
+  - form vaildation errors are displayed using react-hook-forms `errors`
+  - Error that appear after form submission are managed and shown using React useState()
+  - If user logs in successfully
+    - get all the recipes AND user own recipes using appwriteDatabaseService
+    - dispatch the user details to the redux-store using authLogin
+    - dispatch the users recipies and all the recipes to redux store using allRecipes & usersRecipes
+  - After this navigate to the home('/') router using react-router-dom `useNavigate`
+
 - signup
+
+  - same as login
+  - the only difference is createUser is used in appwriteAuthService
+
 - Auth
 - RTE
 - post recipe uses rte
