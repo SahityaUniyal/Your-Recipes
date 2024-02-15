@@ -1,7 +1,11 @@
 import "./App.css";
-
+import { PostForm } from "./components/index";
 function App() {
-  return <></>;
+  return (
+    <>
+      <PostForm />
+    </>
+  );
 }
 
 export default App;

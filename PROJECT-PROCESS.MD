@@ -98,4 +98,21 @@
   - We will use tiny-mce
   - Render the Editor from tiny-mce with all the plugins and settings you want using `Controller` from react-hook-form
   - provide the default value as a props in case we use it in edit post
-- post recipe uses rte
+- post form
+  - use to create new recipe or edit recipe
+  - input all the components that you will use and use them using react-hook-forms
+  - if the user passes the recipe prop means it is an edit request
+    - get the data on submit using react-hook-forms `handleSubmit`
+    - then make use of appwrite and redux store to handle the request
+    - If everything is successful navigate the user to the recipe
+  - If there is no recipe prop means a new recipe to be created
+    - get the data on submit
+    - then make use of appwrite and redux store to create a new recipe
+    - If everything goes well navigate the user to the recipe
+
+Create the pages
+
+- Set up routing
+- create a home path
+- wrap login,logout ... pages inside AuthLayout
+- Then render the router provider
