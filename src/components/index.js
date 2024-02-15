@@ -8,7 +8,8 @@ import Select from "./Select";
 import RecipeCard from "./RecipeCard";
 import Signin from "./Signin";
 import Signup from "./Signup";
-
+import AuthLayout from "./AuthLayout";
+import RTE from "./RTE";
 export {
   Container,
   Header,
@@ -20,4 +21,6 @@ export {
   RecipeCard,
   Signin,
   Signup,
+  AuthLayout,
+  RTE,
 };

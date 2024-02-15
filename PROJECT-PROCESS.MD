@@ -7,6 +7,7 @@
     - @reduxjs/toolkit and react-redux : data fetching and maintaining store
     - react-router-dom:
     - react-hook-form : manage forms
+    - @tinymce/tinymce-react : editor
 
 ### Basic set up
 
@@ -85,6 +86,16 @@
   - same as login
   - the only difference is createUser is used in appwriteAuthService
 
-- Auth
+- AuthLayout
+
+  - Layout container for the pages
+  - Purpose:
+    - redirect to login in case the user wants to access the page which requires authentication and is not logged in redux-store
+    - redirect to home if user accesses the page and authentication is false and authStatus is true
+
 - RTE
+  - Realtime editor that will be used to input the recipe
+  - We will use tiny-mce
+  - Render the Editor from tiny-mce with all the plugins and settings you want using `Controller` from react-hook-form
+  - provide the default value as a props in case we use it in edit post
 - post recipe uses rte
