@@ -81,7 +81,7 @@ class AppwriteDatabaseService {
   }
   async getUserRecipes(userId) {
     try {
-      return await this.databases.getDocument(
+      return await this.databases.listDocuments(
         conf.appwriteDatabaseId,
         conf.appwriteCollectionId,
         [Query.equal("userId", userId)]

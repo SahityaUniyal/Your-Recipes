@@ -5,12 +5,7 @@ import { Outlet } from "react-router-dom";
 import appwriteAuthService from "./appwrite/auth";
 import { useDispatch } from "react-redux";
 import { login, logout } from "./store/authSlice";
-import appwriteDatabaseService from "./appwrite/database";
-import {
-  clearAllRecipes,
-  setAllRecipes,
-  setUsersRecipes,
-} from "./store/recipeSlice";
+import { clearAllRecipes } from "./store/recipeSlice";
 function App() {
   const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();

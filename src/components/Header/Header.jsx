@@ -11,25 +11,25 @@ function Header() {
     {
       name: "Home",
       slug: "/",
-      class: "w-20  h-[41px]",
+      class: "h-[41px]",
       active: true,
     },
     {
       name: "All Recipes",
-      slug: "all-recipes",
-      class: "w-20  h-[41px]",
+      slug: "/all-recipes",
+      class: "h-[41px]",
       active: true,
     },
     {
       name: "My Recipies",
-      slug: "my-recipes",
-      class: "w-20  h-[41px]",
+      slug: "/my-recipes",
+      class: "h-[41px]",
       active: authStatus,
     },
     {
       name: "Add Recipe",
-      slug: "add-recipe",
-      class: "w-20  h-[41px]",
+      slug: "/add-recipe",
+      class: "h-[41px]",
       active: authStatus,
     },
     {

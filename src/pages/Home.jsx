@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import appwriteDatabaseService from "../appwrite/database";
 import { Container, RecipeCard } from "../components/index";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setAllRecipes } from "../store/recipeSlice";
 function Home() {
   const [recipes, setRecipes] = useState([]);
   const dispatch = useDispatch();
+  const user = useSelector((state) => state.auth);
   useEffect(() => {
     appwriteDatabaseService.getRecipes().then((recipes) => {
       if (recipes) {
