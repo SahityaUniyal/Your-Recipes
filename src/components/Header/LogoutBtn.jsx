@@ -1,17 +1,14 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../store/authSlice";
 import { clearAllRecipes } from "../../store/recipeSlice";
 import appwriteAuth from "../../appwrite/auth";
 function LogoutBtn() {
   const dispatch = useDispatch();
-  const loggedStatus = useSelector((state) => {
-    state.auth.status;
-  });
+  const user = useSelector((state) => state.auth);
   const logoutHandler = (e) => {
     e.preventDefault();
-    if (!loggedStatus) {
+    if (!user.status) {
       console.log("No user to logout");
       return null;
     }

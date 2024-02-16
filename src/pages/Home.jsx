@@ -2,14 +2,14 @@ import { useState, useEffect } from "react";
 import appwriteDatabaseService from "../appwrite/database";
 import { Container, RecipeCard } from "../components/index";
 import { useDispatch } from "react-redux";
-import { allRecipes } from "../store/recipeSlice";
+import { setAllRecipes } from "../store/recipeSlice";
 function Home() {
   const [recipes, setRecipes] = useState([]);
   const dispatch = useDispatch();
   useEffect(() => {
     appwriteDatabaseService.getRecipes().then((recipes) => {
       if (recipes) {
-        dispatch(allRecipes(recipes.documents));
+        dispatch(setAllRecipes(recipes.documents));
         setRecipes(recipes.documents);
       }
     });
@@ -18,7 +18,7 @@ function Home() {
     return (
       <div>
         <Container>
-          <div>
+          <div className="w-full p-8">
             <h1>No Recipes available</h1>
           </div>
         </Container>

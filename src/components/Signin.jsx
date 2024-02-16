@@ -4,7 +4,7 @@ import appwriteAuthService from "../appwrite/auth";
 import appwriteDatabaseService from "../appwrite/database";
 import { useState } from "react";
 import { login as authLogin } from "../store/authSlice";
-import { allRecipes, usersRecipes } from "../store/recipeSlice";
+import { setAllRecipes, setUsersRecipes } from "../store/recipeSlice";
 import { useDispatch } from "react-redux";
 import { useNavigate, Link } from "react-router-dom";
 function Signin() {
@@ -25,8 +25,8 @@ function Signin() {
           const allRecipe = appwriteDatabaseService.getRecipes();
           const usersRecipe = appwriteDatabaseService.getUserRecipes(user.$id);
           dispatch(authLogin(user));
-          dispatch(allRecipes(allRecipe));
-          dispatch(usersRecipes(usersRecipe));
+          dispatch(setAllRecipes(allRecipe));
+          dispatch(setUsersRecipes(usersRecipe));
         }
         navigate("/");
       }

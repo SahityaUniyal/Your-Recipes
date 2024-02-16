@@ -48,7 +48,7 @@ function Header() {
     },
   ];
   return (
-    <header className="w-full bg-[#E8F3F3] fixed">
+    <header className="w-full bg-[#E8F3F3] sticky top-0">
       <nav className=" h-16 flex justify-around gap-8 items-center ">
         <div>
           <Link to="/">

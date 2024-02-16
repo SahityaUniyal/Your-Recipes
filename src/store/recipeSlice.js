@@ -7,7 +7,7 @@ const recipeSlice = createSlice({
   name: "recipes",
   initialState,
   reducers: {
-    allRecipes: (state, action) => {
+    setAllRecipes: (state, action) => {
       state.allRecipes = action.payload.allRecipes;
     },
     setUsersRecipes: (state, action) => {
@@ -19,6 +19,6 @@ const recipeSlice = createSlice({
     },
   },
 });
-export const { allRecipes, usersRecipes, clearAllRecipes } =
+export const { setAllRecipes, setUsersRecipes, clearAllRecipes } =
   recipeSlice.actions;
 export default recipeSlice.reducer;

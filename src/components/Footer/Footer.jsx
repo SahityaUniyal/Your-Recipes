@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Logo } from "../index";
 function Footer() {
   return (
-    <footer className="sticky bottom-0 p-10 w-full bg-[#E8F3F3] flex items-center justify-evenly">
+    <footer className="p-10 w-full bg-[#E8F3F3] flex items-center justify-evenly">
       <div>
         <Link to="/">
           <Logo />
