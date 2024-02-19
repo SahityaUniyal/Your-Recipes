@@ -14,6 +14,7 @@ import {
   Signup,
   Recipe,
   EditRecipe,
+  MyRecipes,
 } from "./pages/index.js";
 const router = createBrowserRouter([
   {
@@ -69,6 +70,14 @@ const router = createBrowserRouter([
         element: (
           <AuthLayout authentication={true}>
             <EditRecipe />
+          </AuthLayout>
+        ),
+      },
+      {
+        path: "/my-recipes/",
+        element: (
+          <AuthLayout authentication={true}>
+            <MyRecipes />
           </AuthLayout>
         ),
       },

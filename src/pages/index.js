@@ -5,4 +5,14 @@ import AllRecipes from "./AllRecipes";
 import AddRecipe from "./AddRecipe";
 import Recipe from "./Recipe";
 import EditRecipe from "./EditRecipe";
-export { Home, Login, Signup, AllRecipes, AddRecipe, Recipe, EditRecipe };
+import MyRecipes from "./MyRecipes";
+export {
+  Home,
+  Login,
+  Signup,
+  AllRecipes,
+  AddRecipe,
+  Recipe,
+  EditRecipe,
+  MyRecipes,
+};

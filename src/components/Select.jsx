@@ -12,7 +12,7 @@ function Select(
           {label}
         </label>
       )}
-      <select name="" id={id} className={`p-2 ${className}`} ref={ref}>
+      <select id={id} className={`p-2 ${className}`} ref={ref} {...props}>
         {options?.map((option) => (
           <option key={option} value={option}>
             {option}
