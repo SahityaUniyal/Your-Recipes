@@ -42,7 +42,7 @@ const router = createBrowserRouter([
       {
         path: "/all-recipes",
         element: (
-          <AuthLayout authentication={true}>
+          <AuthLayout authentication={false}>
             <AllRecipes />
           </AuthLayout>
         ),
@@ -58,11 +58,19 @@ const router = createBrowserRouter([
       {
         path: "/recipe/:recipeId",
         element: (
-          <AuthLayout>
+          <AuthLayout authentication={true}>
             <Recipe />
           </AuthLayout>
         ),
       },
+      // {
+      //   path: "/edit-recipe/:recipeId",
+      //   element: (
+      //     <AuthLayout authentication={true}>
+      //       < />
+      //     </AuthLayout>
+      //   ),
+      // },
     ],
   },
 ]);

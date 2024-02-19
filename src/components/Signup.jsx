@@ -38,7 +38,7 @@ function Signup() {
   };
   return (
     <>
-      <div className="m-auto mt-10 shadow p-10 flex flex-col w-1/3 gap-3">
+      <div className="m-auto my-10 shadow p-10 flex flex-col w-1/3 gap-3">
         <h2 className="text-center text-2xl font-bold leading-tight">
           Signup for an account
         </h2>

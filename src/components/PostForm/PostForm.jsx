@@ -48,7 +48,7 @@ function PostForm({ recipe }) {
           userId: userData.$id,
         });
         if (dbrecipe) {
-          navigate(`/post/${dbrecipe.$id}`);
+          navigate(`/recipe/${dbrecipe.$id}`);
         }
       }
     }

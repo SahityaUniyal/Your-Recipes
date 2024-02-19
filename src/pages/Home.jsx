@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setAllRecipes } from "../store/recipeSlice";
 function Home() {
   const [recipes, setRecipes] = useState([]);
+  const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
   const user = useSelector((state) => state.auth);
   useEffect(() => {
@@ -12,9 +13,13 @@ function Home() {
       if (recipes) {
         dispatch(setAllRecipes(recipes.documents));
         setRecipes(recipes.documents);
+        setLoading(false);
       }
     });
   }, []);
+  if (loading) {
+    return <h1>Loading...</h1>;
+  }
   if (recipes.length === 0) {
     return (
       <div>

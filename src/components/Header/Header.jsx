@@ -18,7 +18,7 @@ function Header() {
       name: "All Recipes",
       slug: "/all-recipes",
       class: "h-[41px]",
-      active: true,
+      active: authStatus,
     },
     {
       name: "My Recipies",
@@ -48,7 +48,7 @@ function Header() {
     },
   ];
   return (
-    <header className="w-full bg-[#E8F3F3] sticky top-0">
+    <header className="w-full bg-[#E8F3F3] sticky top-0 z-10">
       <nav className=" h-16 flex justify-around gap-8 items-center ">
         <div>
           <Link to="/">

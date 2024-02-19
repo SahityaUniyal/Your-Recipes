@@ -8,6 +8,7 @@
     - react-router-dom:
     - react-hook-form : manage forms
     - @tinymce/tinymce-react : editor
+    - html-rect-parser : to convert the html for content we get from editor
 
 ### Basic set up
 
@@ -123,9 +124,13 @@ Create the pages
   - Set up the login page and logout page withing AuthLayout setting authentication=false
 - Add Add Recipe page
   - use PostForm component in this to create a new recipe
-- Add All Recipes page
-- Add Recipe page
+- Recipe page
   - Displays the single recipe
   - useParams from `react-router-dom` to get the id from url
   - use appwriteDatabaseService to get the recipe
   - Now display the recipe
+  - use html parser to convert html content from recipe content
+  - display edit and delete button based on if the user created the recipe
+- All Recipes page
+  - Get all the recipes from appwrite
+  - display all of them using RecipeCard
