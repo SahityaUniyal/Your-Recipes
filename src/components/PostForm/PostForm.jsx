@@ -11,7 +11,6 @@ function PostForm({ recipe }) {
     control,
     handleSubmit,
     getValues,
-    setValue,
     formState: { errors },
   } = useForm({
     defaultValues: {
@@ -35,7 +34,7 @@ function PostForm({ recipe }) {
         featuredImage: file ? file.$id : undefined,
       });
       if (dbrecipe) {
-        navigate(`/recipe/:${dbrecipe.$id}`);
+        navigate(`/recipe/${dbrecipe.$id}`);
       }
     } else {
       const file = data.image[0]
@@ -45,7 +44,7 @@ function PostForm({ recipe }) {
         const dbrecipe = await appwriteDatabaseService.createRecipe({
           ...data,
           featuredImage: file.$id,
-          userId: userData.$id,
+          userId: userData?.$id,
         });
         if (dbrecipe) {
           navigate(`/recipe/${dbrecipe.$id}`);
@@ -53,7 +52,6 @@ function PostForm({ recipe }) {
       }
     }
   };
-  errors;
   return (
     <form onSubmit={handleSubmit(submit)} className="flex p-5 gap-5">
       {errors.length > 0 && (

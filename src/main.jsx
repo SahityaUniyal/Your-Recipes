@@ -13,6 +13,7 @@ import {
   Login,
   Signup,
   Recipe,
+  EditRecipe,
 } from "./pages/index.js";
 const router = createBrowserRouter([
   {
@@ -63,14 +64,14 @@ const router = createBrowserRouter([
           </AuthLayout>
         ),
       },
-      // {
-      //   path: "/edit-recipe/:recipeId",
-      //   element: (
-      //     <AuthLayout authentication={true}>
-      //       < />
-      //     </AuthLayout>
-      //   ),
-      // },
+      {
+        path: "/edit-recipe/:recipeId",
+        element: (
+          <AuthLayout authentication={true}>
+            <EditRecipe />
+          </AuthLayout>
+        ),
+      },
     ],
   },
 ]);

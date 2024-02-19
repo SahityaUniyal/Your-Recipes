@@ -134,3 +134,9 @@ Create the pages
 - All Recipes page
   - Get all the recipes from appwrite
   - display all of them using RecipeCard
+- Edit Recipes page
+  - get the recipe id using the params
+  - get the recipe using appwrite service
+  - Render the PostForm component and pass the recipe
+- My recipes
+  - display the recipe that the user Created
