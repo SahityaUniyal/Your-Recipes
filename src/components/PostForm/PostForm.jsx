@@ -23,10 +23,9 @@ function PostForm({ recipe }) {
   const navigate = useNavigate();
   const userData = useSelector((state) => state.auth.userData);
   const submit = async (data) => {
-    console.log(data);
     if (recipe) {
       const file = data.image[0]
-        ? appwriteFileService.uploadFile(data.image[0])
+        ? await appwriteFileService.uploadFile(data.image[0])
         : null;
       if (file) {
         appwriteFileService.deleteFile(recipe.featuredImage);
@@ -40,7 +39,7 @@ function PostForm({ recipe }) {
       }
     } else {
       const file = data.image[0]
-        ? appwriteFileService.uploadFile(data.image[0])
+        ? await appwriteFileService.uploadFile(data.image[0])
         : null;
       if (file) {
         const dbrecipe = await appwriteDatabaseService.createRecipe({
@@ -69,7 +68,7 @@ function PostForm({ recipe }) {
         />
         <RTE
           label={"Content :"}
-          name="Content"
+          name="content"
           control={control}
           defaultValue={getValues("content")}
         />

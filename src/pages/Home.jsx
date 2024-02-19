@@ -19,8 +19,8 @@ function Home() {
     return (
       <div>
         <Container>
-          <div className="w-full p-8">
-            <h1>No Recipes available</h1>
+          <div className="w-full flex justify-center p-8">
+            <h1 className="font-bold">No Recipes available</h1>
           </div>
         </Container>
       </div>
@@ -29,7 +29,7 @@ function Home() {
   return (
     <div>
       <Container>
-        <div>
+        <div className="flex flex-wrap gap-8 justify-center p-8">
           {recipes.map((recipe) => (
             <div key={recipe.$id}>
               <RecipeCard {...recipe} />

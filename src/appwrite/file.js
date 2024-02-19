@@ -32,9 +32,16 @@ class AppwriteFileService {
   }
   getFilePreview(fileId) {
     try {
-      return this.storage.getFilePreview(fileId);
+      return this.storage.getFilePreview(conf.appwriteBucketId, fileId);
     } catch (error) {
       console.error("Appwrite file :: get file preview :: error", error);
+    }
+  }
+  async getFile(fileId) {
+    try {
+      return this.storage.getFileView(conf.appwriteBucketId, fileId);
+    } catch (error) {
+      console.log("Appwrite File :: get file :: error", error);
     }
   }
 }

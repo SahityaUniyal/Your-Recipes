@@ -22,11 +22,13 @@ function Signup() {
       if (user) {
         user = await appwriteAuthService.getCurrentUser();
         if (user) {
-          const allRecipe = appwriteDatabaseService.getRecipes();
-          const usersRecipe = appwriteDatabaseService.getUserRecipes(user.$id);
-          dispatch(authLogin(user));
-          dispatch(setAllRecipes(allRecipe));
-          dispatch(setUsersRecipes(usersRecipe));
+          const allRecipe = await appwriteDatabaseService.getRecipes();
+          const usersRecipe = await appwriteDatabaseService.getUserRecipes(
+            user.$id
+          );
+          dispatch(authLogin({ user }));
+          dispatch(setAllRecipes({ allRecipe }));
+          dispatch(setUsersRecipes({ usersRecipe }));
         }
         navigate("/");
       }
@@ -94,12 +96,13 @@ function Signup() {
                     message: "Password must be 8 characters or more",
                   },
                 })}
+                type="password"
                 label={"Password"}
                 placeholder={"Enter Your Password"}
               />
             </div>
             <Button type="submit" className="w-full tracking-widest">
-              SignIn
+              SignUp
             </Button>
           </div>
         </form>

@@ -6,7 +6,14 @@ import { Provider } from "react-redux";
 import store from "./store/store.js";
 import AuthLayout from "./components/AuthLayout.jsx";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { Home, Login } from "./pages/index.js";
+import {
+  AddRecipe,
+  AllRecipes,
+  Home,
+  Login,
+  Signup,
+  Recipe,
+} from "./pages/index.js";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -19,8 +26,40 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: (
-          <AuthLayout>
+          <AuthLayout authentication={false}>
             <Login />
+          </AuthLayout>
+        ),
+      },
+      {
+        path: "/signup",
+        element: (
+          <AuthLayout authentication={false}>
+            <Signup />
+          </AuthLayout>
+        ),
+      },
+      {
+        path: "/all-recipes",
+        element: (
+          <AuthLayout authentication={true}>
+            <AllRecipes />
+          </AuthLayout>
+        ),
+      },
+      {
+        path: "/add-recipe",
+        element: (
+          <AuthLayout authentication={true}>
+            <AddRecipe />
+          </AuthLayout>
+        ),
+      },
+      {
+        path: "/recipe/:recipeId",
+        element: (
+          <AuthLayout>
+            <Recipe />
           </AuthLayout>
         ),
       },

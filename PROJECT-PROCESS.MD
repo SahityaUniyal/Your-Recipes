@@ -113,6 +113,19 @@
 Create the pages
 
 - Set up routing
-- create a home path
+  - Use react router dom and add set up the router and set up an `Outlet` in app.jsx
+  - Set up router.provider
+  - In app.jsx set up a loading state and when the details are retrived using appwrite then set up in redux-store and set loading to false
+- create a home page and set up a path for it
+  - import the components needed and set up the home page
+  - render that page when user hits the '/' route
 - wrap login,logout ... pages inside AuthLayout
-- Then render the router provider
+  - Set up the login page and logout page withing AuthLayout setting authentication=false
+- Add Add Recipe page
+  - use PostForm component in this to create a new recipe
+- Add All Recipes page
+- Add Recipe page
+  - Displays the single recipe
+  - useParams from `react-router-dom` to get the id from url
+  - use appwriteDatabaseService to get the recipe
+  - Now display the recipe

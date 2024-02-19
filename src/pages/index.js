@@ -1,3 +1,7 @@
 import Home from "./Home";
 import Login from "./Login";
-export { Home, Login };
+import Signup from "./Signup";
+import AllRecipes from "./AllRecipes";
+import AddRecipe from "./AddRecipe";
+import Recipe from "./Recipe";
+export { Home, Login, Signup, AllRecipes, AddRecipe, Recipe };
