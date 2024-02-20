@@ -61,7 +61,7 @@ function Recipe() {
           <h1 className="mt-5 text-3xl text-center capitalize">
             {recipe.title}
           </h1>
-          <div>{parse(recipe.content)}</div>
+          <div className="prose">{parse(recipe.content)}</div>
         </div>
       </div>
     </Container>

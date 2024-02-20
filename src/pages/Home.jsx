@@ -24,6 +24,14 @@ function Home() {
     return (
       <div>
         <Container>
+          <div>
+            <p>
+              Are you looking to whip up delicious meals using the ingredients
+              you have at home? Look no further! Recipe Finder is your go-to
+              destination for discovering mouthwatering recipes tailored to your
+              pantry.
+            </p>
+          </div>
           <div className="w-full flex justify-center p-8">
             <h1 className="font-bold">No Recipes available</h1>
           </div>
@@ -34,6 +42,17 @@ function Home() {
   return (
     <div>
       <Container>
+        <div className="w-1/2 my-20 m-auto">
+          <p className="text-gray-600">
+            Are you looking to whip up delicious meals using the ingredients you
+            have at home? Look no further! Recipe Finder is your go-to
+            destination for discovering mouthwatering recipes tailored to your
+            pantry.
+          </p>
+        </div>
+        <h1 className="w-1/2 m-auto p-4 text-2xl font-bold  bg-[#E8F3F3]">
+          All Recipes
+        </h1>
         <div className="flex flex-wrap gap-8 justify-center p-8">
           {recipes.map((recipe) => (
             <div key={recipe.$id}>

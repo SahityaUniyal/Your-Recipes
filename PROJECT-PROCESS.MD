@@ -8,6 +8,7 @@
     - react-router-dom:
     - react-hook-form : manage forms
     - @tinymce/tinymce-react : editor
+    - @tailwindcss/typography
     - html-rect-parser : to convert the html for content we get from editor
 
 ### Basic set up
@@ -140,3 +141,4 @@ Create the pages
   - Render the PostForm component and pass the recipe
 - My recipes
   - display the recipe that the user Created
+  - show the status of inactive recipes

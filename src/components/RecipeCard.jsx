@@ -5,7 +5,7 @@ function RecipeCard({ $id, title, featuredImage }) {
   return (
     <Link to={`/recipe/${$id}`}>
       <div className="bg-[#E8F3F3] p-4 rounded-xl shadow-xl">
-        <div className="w-full justify-center mb-4">
+        <div className="w-full flex justify-center mb-4">
           <img
             src={appwriteFileService.getFilePreview(featuredImage)}
             alt={title}

@@ -44,7 +44,7 @@ const router = createBrowserRouter([
       {
         path: "/all-recipes",
         element: (
-          <AuthLayout authentication={false}>
+          <AuthLayout authentication={true}>
             <AllRecipes />
           </AuthLayout>
         ),

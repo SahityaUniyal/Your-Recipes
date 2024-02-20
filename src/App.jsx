@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "./App.css";
 import { Footer, Header } from "./components";
 import { Outlet } from "react-router-dom";
 import appwriteAuthService from "./appwrite/auth";
