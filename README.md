@@ -32,6 +32,8 @@ Live Version: [https://your-recipes.vercel.app/](https://your-recipes.vercel.app
   - View all recipes.
   - View your own recipes under "My Recipes".
   - Add a new recipe using the "Add Recipe" option.
+  - Make a recipe active so that everyone can view it
+  - Make it inactive so that only you can see it in `my recipes`
 
 ## Running Locally
 
