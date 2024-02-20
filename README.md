@@ -23,6 +23,16 @@
 
 Live Version: [https://your-recipes.vercel.app/](https://your-recipes.vercel.app/).
 
+## Functionality
+
+- You can view just the preview on the home page without logging in.
+- Create an account using the Signup button.
+- Log in to your existing account using the Login button.
+- After login:
+  - View all recipes.
+  - View your own recipes under "My Recipes".
+  - Add a new recipe using the "Add Recipe" option.
+
 ## Running Locally
 
 1. Clone the repository
