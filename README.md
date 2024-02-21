@@ -1,10 +1,16 @@
 # Your Recipes
 
+"Your Recipes" is a web application where you can post your recipes and view other users recipes. It uses React for frontend and with the integration of Appwrite for backend services, including authentication, database management, and file storage.
+
 ## Table of Contents
 
-- [Tech Stack](#tech-stack)
 - [Project Link](#project-link)
+- [Tech Stack](#tech-stack)
 - [Project Process](#project-process)
+
+## Project Link
+
+Live Version: [https://your-recipes.vercel.app/](https://your-recipes.vercel.app/).
 
 ## Tech Stack
 
@@ -16,12 +22,6 @@
 - @tinymce/tinymce-react
 - @tailwindcss/typography
 - html-rect-parser
-
-## Project Link
-
-## Project Link
-
-Live Version: [https://your-recipes.vercel.app/](https://your-recipes.vercel.app/).
 
 ## Functionality
 
@@ -61,4 +61,4 @@ Live Version: [https://your-recipes.vercel.app/](https://your-recipes.vercel.app
 
 ## Project Process
 
-Check the project process: [here](https://github.com/SahityaUniyal/Your-Recipes/blob/main/PROJECT-PROCESS.MD)
+Check the project creation process: [here](https://github.com/SahityaUniyal/Your-Recipes/blob/main/PROJECT-PROCESS.MD)
