@@ -6,7 +6,13 @@ import appwriteFileService from "../../appwrite/file";
 import { useSelector } from "react-redux";
 import appwriteDatabaseService from "../../appwrite/database";
 function PostForm({ recipe }) {
-  const { register, control, handleSubmit, getValues } = useForm({
+  const {
+    register,
+    control,
+    handleSubmit,
+    getValues,
+    formState: { isSubmitting },
+  } = useForm({
     defaultValues: {
       title: recipe?.title || "",
       content: recipe?.content || "",
@@ -98,7 +104,9 @@ function PostForm({ recipe }) {
             className="mb-8"
             {...register("status", { required: true })}
           />
-          <Button type="submit">{recipe ? "Update" : "Submit"}</Button>
+          <Button disabled={isSubmitting} type="submit">
+            {recipe ? "Update" : "Submit"}
+          </Button>
         </div>
       </form>
     </>
